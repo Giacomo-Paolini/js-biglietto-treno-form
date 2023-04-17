@@ -5,14 +5,12 @@ function priceTicket() {
     let age = document.getElementById("age").value;
     let price = km * 0.21;
     let name = document.getElementById("name").value;
-    if (age == "Under 18") {
+    if (age == "1") {
         price -= (price / 100 * 20);
-    }   else if (age == "Over 65") {
+    }   else if (age == "3") {
         price -= (price / 100 * 40);
     }
-    price = parseFloat(price).toFixed(2);
+    price = price.toFixed(2);
     document.getElementById("price").innerText = price + " €";
-    console.log(price + "€")
     document.getElementById("nameUser").innerText = name;
-    console.log(name)
 } 
